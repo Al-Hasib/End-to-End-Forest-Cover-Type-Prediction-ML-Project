@@ -4,4 +4,4 @@ numpy
 xgboost
 ipykernel
 
-# -e .
+-e .
