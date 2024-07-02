@@ -6,7 +6,7 @@ import pandas as pd
 from src.logger.logging import logging
 from src.exception.exception import customexception
 
-from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.metrics import accuracy_score
 
 def save_object(file_path, obj):
 
@@ -29,3 +29,28 @@ def load_object(file_path):
     except Exception as e:
         logging.info('Exception happes in load object function utils')
         raise customexception(e,sys)
+    
+
+def evaluate_model(X_train, y_train, X_test, y_test, models):
+    try:
+        report = {}
+        for i in range(len(models)):
+            model = list(models.values())[i]
+            # train model
+            model.fit(X_train, y_train)
+
+            # Predict Testing data
+            y_test_pred = model.predict(X_test)
+
+            # get accuracy score 
+            test_model_score = accuracy_score(y_test, y_test_pred)
+
+            report[list(models.keys())[i]] = test_model_score
+        
+        return report
+    
+    except Exception as e:
+        logging.info('Exception occured during model training')
+        raise customexception(e,sys)
+
+
