@@ -28,7 +28,7 @@ class DataTransformation:
             # pipeline added
             pipeline = Pipeline(
                 steps=[
-                    ('imputer', SimpleImputer(strategy='medium')),
+                    ('imputer', SimpleImputer(strategy='median')),
                     ('scaler',StandardScaler())
                 ]
             )
@@ -55,10 +55,12 @@ class DataTransformation:
             drop_columns = [target_column_name, "Id"]
 
             input_feature_train_df = train_df.drop(columns=drop_columns, axis=1)
-            target_feature_train_df = train_df[target_column_name]
+            # classification models are zero index
+            target_feature_train_df = train_df[target_column_name] - 1
 
             input_feature_test_df = test_df.drop(columns=drop_columns, axis=1)
-            target_feature_test_df = test_df[target_column_name]
+            # classification models are zero index
+            target_feature_test_df = test_df[target_column_name] - 1
 
             input_feature_train_arr = preprocessing_obj.fit_transform(input_feature_train_df)
             input_feature_test_arr = preprocessing_obj.transform(input_feature_test_df)
@@ -66,7 +68,7 @@ class DataTransformation:
             logging.info("Applying preprocessing object on training and testing datasets")
 
             train_arr = np.c_[input_feature_train_arr, np.array(target_feature_train_df)]
-            test_arr = np.c_[input_feature_test_arr, np.arrya(target_feature_test_df)]
+            test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
 
             save_object(
                 file_path=self.data_transformation_config.preprocessor_obj_file_path,

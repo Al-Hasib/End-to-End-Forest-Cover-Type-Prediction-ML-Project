@@ -14,11 +14,12 @@ class ModelEvaluation:
     def eval_metrics(self, actual, pred):
         accuracy = accuracy_score(actual, pred)
         confusion = confusion_matrix(actual, pred)
-        precision = precision_score(actual, pred)
-        recall = recall_score(actual, pred)
-        f1 = f1_score(actual,pred)
+        
+        # precision = precision_score(actual, pred)
+        # recall = recall_score(actual, pred)
+        # f1 = f1_score(actual,pred)
 
-        return accuracy, confusion, precision, recall,f1
+        return accuracy, confusion
     
     def initiated_model_evaluation(self, train_array, test_array):
         try:
@@ -28,9 +29,9 @@ class ModelEvaluation:
 
             pred = model.predict(X_test)
 
-            accuracy, confusion, precision, recall, f1 = self.eval_metrics(y_test, pred)
+            accuracy, confusion = self.eval_metrics(y_test, pred)
 
-            information = (f"Accuracy {accuracy}\n confusion matrix \n{confusion} \nprecision {precision}, recall {recall} and f1 score {f1}")
+            information = (f"Accuracy {accuracy}\n confusion matrix \n{confusion}\n The Training pipeline has completed...")
 
             logging.info(information)
             print(information)
