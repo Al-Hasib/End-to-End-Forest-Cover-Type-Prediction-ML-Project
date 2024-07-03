@@ -23,6 +23,7 @@ The dataset is released in the Kaggle competition. You will get the data [here](
     python main.py
 
 See the Demo of the Project
-![Watch the video](https://youtu.be/KsaedbEfC3E?si=NepWwSkCex_jli-r)
+[![Watch the video](https://img.youtu.be/KsaedbEfC3E?si=NepWwSkCex_jli-r/0.jpg)](https://youtu.be/KsaedbEfC3E?si=NepWwSkCex_jli-r "Everything Is AWESOME")
+
 
 ## Thank You
