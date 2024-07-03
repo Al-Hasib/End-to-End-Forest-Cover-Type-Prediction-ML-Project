@@ -22,10 +22,4 @@ The dataset is released in the Kaggle competition. You will get the data [here](
 ### Run the main.py file
     python main.py
 
-
- _______ _                 _     __     __
-|__   __| |               | |    \ \   / /
-   | |  | |__   __ _ _ __ | | __  \ \_/ /__  _   _
-   | |  | '_ \ / _` | '_ \| |/ /   \   / _ \| | | |
-   | |  | | | | (_| | | | |   <     | | (_) | |_| |
-   |_|  |_| |_|\__,_|_| |_|_|\_\    |_|\___/ \__,_|
+## Thank You
