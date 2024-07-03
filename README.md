@@ -6,6 +6,25 @@ In this problem, we need to predict the forest cover type (the predominant kind 
 
 This study area includes four wilderness areas located in the Roosevelt National Forest of northern Colorado. These areas represent forests with minimal human-caused disturbances, so that existing forest cover types are more a result of ecological processes rather than forest management practices.
 
-### Dataset
+## Dataset
 The dataset is released in the Kaggle competition. You will get the data [here](https://www.kaggle.com/c/forest-cover-type-prediction/overview) and all the description about dataset.
 
+## To Run the Repository
+
+### Clone the repository
+    git clone https://github.com/Al-Hasib/End-to-End-Forest-Cover-Type-Prediction-ML-Project.git
+
+
+### Install the requirements
+    pip install -r requirements.txt
+
+### Run the main.py file
+    python main.py
+
+
+ _______ _                 _     __     __
+|__   __| |               | |    \ \   / /
+   | |  | |__   __ _ _ __ | | __  \ \_/ /__  _   _
+   | |  | '_ \ / _` | '_ \| |/ /   \   / _ \| | | |
+   | |  | | | | (_| | | | |   <     | | (_) | |_| |
+   |_|  |_| |_|\__,_|_| |_|_|\_\    |_|\___/ \__,_|
