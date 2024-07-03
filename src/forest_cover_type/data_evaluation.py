@@ -31,7 +31,7 @@ class ModelEvaluation:
 
             accuracy, confusion = self.eval_metrics(y_test, pred)
 
-            information = (f"Accuracy {accuracy}\n confusion matrix \n{confusion}\n The Training pipeline has completed...")
+            information = (f"Accuracy {accuracy}\n confusion matrix \n{confusion}\n")
 
             logging.info(information)
             print(information)
